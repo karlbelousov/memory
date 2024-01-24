@@ -31,6 +31,7 @@
         <Card
           key={item.id}
           url={item.url}
+          alt={item.description}
           isVisibled={visibleItems.includes(item.id)}
           isFinished={finishedItems.includes(item.id)}
         />
@@ -42,11 +43,11 @@
       )
     }
 
-    function Card({ url, isVisibled = true, isFinished = true }) {
+    function Card({ url, alt, isVisibled = true, isFinished = true }) {
       const className = `card ${isVisibled ? 'card-show' : ''} ${isFinished ? 'card-finished' : ''}`
       return (
         <li className={className}>
-          <img src={url} width="204" height="144" alt="Котик" />
+          <img src={url} width="204" height="144" alt={alt} />
         </li>
       )
     }
