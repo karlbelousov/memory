@@ -1,10 +1,14 @@
-// Файл для настроек приложения
-const TIMEOUT = 800;
-
 const AppRoute = {
-    Game: 'game',
-    Results: 'results',
-  };
-  
-  window.TIMEOUT = TIMEOUT;
-  window.AppRoute = AppRoute;
+  Initial: 'initial',
+  Game: 'game',
+  Results: 'results',
+};
+
+const GAME_TYPES = [
+  { type: 'cats', text: 'Котики' },
+  { type: 'flowers', text: 'Цветочки' },
+  { type: 'cars', text: 'Машины' },
+];
+
+const TIMEOUT = 900;
+const RANDOMIZED = false;
